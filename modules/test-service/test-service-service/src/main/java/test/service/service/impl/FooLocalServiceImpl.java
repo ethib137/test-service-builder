@@ -45,7 +45,7 @@ public class FooLocalServiceImpl extends FooLocalServiceBaseImpl {
 		return fooPersistence.remove(fooId);
 	}
 
-	public Foo deleteFoo2(long fooId) throws PortalException {
+	public Foo deleteFoo3S(long fooId) throws PortalException {
 		return fooPersistence.remove(fooId);
 	}
 
