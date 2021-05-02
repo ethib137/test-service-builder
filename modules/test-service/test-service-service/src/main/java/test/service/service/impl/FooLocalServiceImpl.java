@@ -53,7 +53,7 @@ public class FooLocalServiceImpl extends FooLocalServiceBaseImpl {
 		return fooPersistence.findByPrimaryKey(fooId);
 	}
 
-	public Foo deleteFoo(long fooId) throws NoSuchFooException {
+	public Foo deleteFoo(long fooId) throws PortalException {
 		return fooPersistence.remove(fooId);
 	}
 }

@@ -91,13 +91,11 @@ public class FooLocalServiceWrapper
 	 *
 	 * @param fooId the primary key of the foo
 	 * @return the foo that was removed
-	 * @throws NoSuchFooException
 	 * @throws PortalException if a foo with the primary key could not be found
 	 */
 	@Override
 	public test.service.model.Foo deleteFoo(long fooId)
-		throws com.liferay.portal.kernel.exception.PortalException,
-			   test.service.exception.NoSuchFooException {
+		throws com.liferay.portal.kernel.exception.PortalException {
 
 		return _fooLocalService.deleteFoo(fooId);
 	}

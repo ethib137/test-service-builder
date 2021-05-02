@@ -116,14 +116,11 @@ public abstract class FooLocalServiceBaseImpl
 	 *
 	 * @param fooId the primary key of the foo
 	 * @return the foo that was removed
-	 * @throws NoSuchFooException
 	 * @throws PortalException if a foo with the primary key could not be found
 	 */
 	@Indexable(type = IndexableType.DELETE)
 	@Override
-	public Foo deleteFoo(long fooId)
-		throws NoSuchFooException, PortalException {
-
+	public Foo deleteFoo(long fooId) throws PortalException {
 		return fooPersistence.remove(fooId);
 	}
 
