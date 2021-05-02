@@ -53,8 +53,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ needs.create_release.outputs.upload_url }}
-          asset_path: '["bundles/deploy/*", "bundles/osgi/modules/*"]'
+          files: |
+            "bundles/deploy/*"
+            "bundles/osgi/modules/*"
       - name: Rollback Release
         if: failure() && needs.create_release.outputs.id != ''
         uses: author/action-rollback@stable
