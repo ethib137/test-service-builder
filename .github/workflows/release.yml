@@ -54,8 +54,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           files: |
-            "bundles/deploy/*"
-            "bundles/osgi/modules/*"
+            bundles/deploy/*
+            bundles/osgi/modules/*
       - name: Rollback Release
         if: failure() && needs.create_release.outputs.id != ''
         uses: author/action-rollback@stable
