@@ -15,14 +15,12 @@
 package test.service.service.impl;
 
 import com.liferay.portal.aop.AopService;
-
 import com.liferay.portal.kernel.exception.PortalException;
+
 import org.osgi.service.component.annotations.Component;
 
-import test.service.exception.NoSuchFooException;
 import test.service.model.Foo;
 import test.service.service.base.FooLocalServiceBaseImpl;
-import test.service.service.persistence.FooPersistence;
 
 /**
  * The implementation of the foo local service.
@@ -43,16 +41,6 @@ import test.service.service.persistence.FooPersistence;
 )
 public class FooLocalServiceImpl extends FooLocalServiceBaseImpl {
 
-	/*
-	 * NOTE FOR DEVELOPERS:
-	 *
-	 * Never reference this class directly. Use <code>test.service.service.FooLocalService</code> via injection or a <code>org.osgi.util.tracker.ServiceTracker</code> or use <code>test.service.service.FooLocalServiceUtil</code>.
-	 */
-
-	public Foo getFoo(long fooId) throws PortalException {
-		return fooPersistence.findByPrimaryKey(fooId);
-	}
-
 	public Foo deleteFoo(long fooId) throws PortalException {
 		return fooPersistence.remove(fooId);
 	}
@@ -60,4 +48,14 @@ public class FooLocalServiceImpl extends FooLocalServiceBaseImpl {
 	public Foo deleteFoo2(long fooId) throws PortalException {
 		return fooPersistence.remove(fooId);
 	}
+
+	/**
+	 * NOTE FOR DEVELOPERS:
+	 *
+	 * Never reference this class directly. Use <code>test.service.service.FooLocalService</code> via injection or a <code>org.osgi.util.tracker.ServiceTracker</code> or use <code>test.service.service.FooLocalServiceUtil</code>.
+	 */
+	public Foo getFoo(long fooId) throws PortalException {
+		return fooPersistence.findByPrimaryKey(fooId);
+	}
+
 }

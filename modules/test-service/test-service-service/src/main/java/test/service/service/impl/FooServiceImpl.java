@@ -41,9 +41,10 @@ import test.service.service.base.FooServiceBaseImpl;
 )
 public class FooServiceImpl extends FooServiceBaseImpl {
 
-	/*
+	/**
 	 * NOTE FOR DEVELOPERS:
 	 *
 	 * Never reference this class directly. Always use <code>test.service.service.FooServiceUtil</code> to access the foo remote service.
 	 */
+
 }
